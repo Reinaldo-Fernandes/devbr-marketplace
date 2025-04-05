@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../lib/firebase";
+import { auth } from "../lib/firebase/firebase";
 import { useRouter } from "next/router";
 
 export default function Register() {

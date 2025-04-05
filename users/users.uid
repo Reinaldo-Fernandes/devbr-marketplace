@@ -1,0 +1,9 @@
+/users/{uid} => {
+  nome: "Reinaldo Neto",
+  bio: "Desenvolvedor full stack júnior apaixonado por projetos reais.",
+  tecnologias: ["React", "Node.js", "Firebase"],
+  linkedin: "...",
+  github: "...",
+  portfolio: "...",
+  foto: "url_da_imagem"
+}

@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { getAuth } from "firebase/auth";
-
-const auth = getAuth();
+import { auth } from "../lib/firebase/firebase";
 import { useRouter } from "next/router";
 
 export default function Login() {
@@ -14,16 +12,16 @@ export default function Login() {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, senha);
-      router.push("/dashboard"); // Redireciona após login bem-sucedido
+      router.push("/dashboard");
     } catch (error: any) {
-      alert(error.message);
+      alert("Erro ao logar: " + error.message);
     }
   };
 
   return (
     <div className="min-h-screen flex justify-center items-center bg-gray-100">
       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md w-80">
-        <h1 className="text-xl font-bold mb-4">Entrar</h1>
+        <h1 className="text-xl font-bold mb-4">Login</h1>
         <input
           className="w-full mb-2 p-2 border rounded"
           type="email"
