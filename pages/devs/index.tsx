@@ -36,8 +36,14 @@ export default function DevsPage({ devs }: { devs: any[] }) {
               </div>
             </div>
           </Link>
-          
         ))}
+      </div>
+
+      {/* ✅ Link para cadastrar novo serviço */}
+      <div className="text-center mt-10">
+        <Link href="/dashboard/servicos" className="text-blue-600 underline text-lg">
+          ➕ Cadastrar novo serviço
+        </Link>
       </div>
     </div>
   );
